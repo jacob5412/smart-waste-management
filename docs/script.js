@@ -15,7 +15,7 @@ firebase.initializeApp(firebaseConfig);
 let smartbins = firebase.database().ref('smartbin');
 
 // display all bins
-smartbins.once("value").then(function (snapshot) {
+smartbins.orderByChild('timestamp').once("value").then(function (snapshot) {
     // Get the bin data from the most recent snapshot of data
     // added to the bin list in Firebase
     snapshot.forEach(function (childSnapshot) {
