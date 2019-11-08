@@ -3,7 +3,7 @@ var temps = [];
 var hums = [];
 var dataSeries = []
 // display all bins
-smartbins.once("value").then(function (snapshot) {
+smartbins.orderByChild('timestamp').once("value").then(function (snapshot) {
     // Get the bin data from the most recent snapshot of data
     // added to the bin list in Firebase
     snapshot.forEach(function (childSnapshot) {
@@ -15,7 +15,8 @@ smartbins.once("value").then(function (snapshot) {
             "hum": smartbin.hum
         }, )
     })
-    var spikes = [5, -5, 3, -3, 8, -8]
+    console.log(dataSeries);
+
     for (var i = 0; i < dataSeries.length; i++) {
         var innerArr = [dataSeries[i].date, dataSeries[i].fill];
         level.push(innerArr);
@@ -24,7 +25,7 @@ smartbins.once("value").then(function (snapshot) {
         innerArr = [dataSeries[i].date, dataSeries[i].hum];
         hums.push(innerArr);
     }
-
+    
     var options = {
         chart: {
             type: 'area',
