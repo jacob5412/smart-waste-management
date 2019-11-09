@@ -1,4 +1,4 @@
-// Your web app's Firebase configuration
+// Edit this
 let firebaseConfig = {
     apiKey: "AIzaSyBiypk00NLUuR0D9x5-SU8jYVfMf35gBq4",
     authDomain: "iot-smart-bin-3ca3d.firebaseapp.com",
