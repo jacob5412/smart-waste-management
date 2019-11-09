@@ -1,13 +1,13 @@
 // Your web app's Firebase configuration
 let firebaseConfig = {
-    apiKey: "AIzaSyBiypk00NLUuR0D9x5-SU8jYVfMf35gBq4",
-    authDomain: "iot-smart-bin-3ca3d.firebaseapp.com",
-    databaseURL: "https://iot-smart-bin-3ca3d.firebaseio.com",
-    projectId: "iot-smart-bin-3ca3d",
-    storageBucket: "iot-smart-bin-3ca3d.appspot.com",
-    messagingSenderId: "587124346578",
-    appId: "1:587124346578:web:714ca2432fb8c06f67670b",
-    measurementId: "G-41RTMWV35Q"
+    apiKey: "",
+    authDomain: "",
+    databaseURL: "",
+    projectId: "",
+    storageBucket: "",
+    messagingSenderId: "",
+    appId: "",
+    measurementId: ""
 };
 firebase.initializeApp(firebaseConfig);
 
