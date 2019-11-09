@@ -72,4 +72,4 @@ sklearn==0.0
 ![GUI](/prediction/data.png)
 
 ### Epoch Loss for models
-![GUI](/prediction/epoch_loss.png)
+![GUI](/prediction/Epoch_loss.png)
