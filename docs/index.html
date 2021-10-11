@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Smart Waste Management System</title>
+        <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+        <!--TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+        <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+        <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+        <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+            integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <style>
+            @import url(https://fonts.googleapis.com/css?family=Roboto);
+
+            body {
+                font-family: Roboto, sans-serif;
+            }
+
+            .chart {
+                max-width: 650px;
+                margin: 35px auto;
+            }
+        </style>
+        </head>
+    <body>
+        <div class="container">
+            <h2>Smart Waste Management System</h2>
+            <h3>Bin Status</h3>
+            <div id="bar" class="chart"></div>
+            <h3>Bin Statistics</h3>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Timestamp</th>
+                        <th>Fill Level</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Topple</th>
+                    </tr>
+                </thead>
+                <tbody id="displayTable">
+                </tbody>
+            </table>
+            <div id="fillchart" class="chart"></div>
+            </div>
+            <div id="tempchart" class="chart"></div>
+            </div>
+            <div id="humchart" class="chart"></div>
+            </div>
+        </div>
+        
+    </body>
+    <script src="script.js"></script>
+    <script src="render_charts.js"></script>
+    <script src="render_bar.js"></script>
+</html>

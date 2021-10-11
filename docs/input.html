@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Input Form for firebase</title>
+          <!-- Load the jQuery library, which we'll use to manipulate HTML elements with Javascript. -->
+          <!-- The core Firebase JS SDK is always required and must be listed first -->
+          <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-app.js"></script>
+
+          <!--TODO: Add SDKs for Firebase products that you want to use https://firebase.google.com/docs/web/setup#available-libraries -->
+          <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase-analytics.js"></script>
+          <script src="https://www.gstatic.com/firebasejs/7.2.3/firebase.js"></script>
+          <script src="https://code.jquery.com/jquery-2.2.0.min.js"></script>
+          <!-- Load Bootstrap stylesheet, which will is CSS that makes everything prettier and also responsive (aka will work on all devices of all sizes). -->
+          <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+              crossorigin="anonymous">      
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="container">
+            <h2>Smart Waste Management System</h2>
+            <h3>Last Added Bin</h3>
+
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Timestamp</th>
+                        <th>Fill Level</th>
+                        <th>Temperature</th>
+                        <th>Humidity</th>
+                        <th>Topple</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <!-- This is empty for now, but it will be filled out by an event handler in application.js with the most recent recommendation data from Firebase. -->
+                        <td id="binshow"></td>
+                        <td id="timeshow"></td>
+                        <td id="fillshow"></td>
+                        <td id="tempshow"></td>
+                        <td id="humshow"></td>
+                        <td id="toppleshow"></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <h3>Form to submit</h3>
+            <form id="addData">
+                <div class="form-group">
+                    <label for="binid">Bin id</label>
+                    <input name="binid" class="form-control" type="number" id="binid" value="1" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="filllevel">Fill level</label>
+                    <input name="filllevel" class="form-control" type="number" step="0.1" id="filllevel" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="temperature">Temperature</label>
+                    <input name="temperature" class="form-control" type="number" step="0.1" id="temperature" min="-40" max="80" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="humidity">Humidity</label>
+                    <input name="humidity" class="form-control" type="number" id="humidity" step="0.1" min="0" max="100" required><br>
+                </div>
+                <div class="form-group">
+                    <label for="topple">Topple</label>
+                    <select name="topple" class="form-control" id="topple" form="addData" required>
+                        <option value="False">False</option>
+                        <option value="True">True</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="timestamp">Timestamp</label>
+                    <input name="timestamp" class="form-control" type="datetime-local" id="timestamp" required><br>
+                </div>
+                <!-- When you click this button, trigger the submit event on this form. -->
+                <button type="submit" class="btn btn-default">Submit</button>
+            </form>
+        </div>
+    </body>
+</html>
