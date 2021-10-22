@@ -2,6 +2,10 @@
  
 A smart waste management system that monitors and predicts waste disposal patterns of an area.
 
+## Research Paper
+
+1. John, J., Varkey, M. S., Podder, R. S., Sensarma, N., Selvi, M., Santhosh Kumar, S. V. N., & Kannan, A. (2021). Smart Prediction and Monitoring of Waste Disposal System Using IoT and Cloud for IoT Based Smart Cities. Wireless Personal Communications, 1-33. [Link](https://link.springer.com/article/10.1007/s11277-021-08897-z)
+
 ## Monitoring using the Arduino
 
 ### Components required
